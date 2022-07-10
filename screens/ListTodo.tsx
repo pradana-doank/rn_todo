@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid'
 import { useReducer, useState } from 'react'
 import {
   Button,
@@ -26,16 +27,19 @@ const ListTodo = () => {
       />
       <Button
         title="Add new todo"
-        onPress={(e) =>
+        onPress={(e) => {
           dispatch({
             type: 'addTodo',
             payload: {
-              key: name.toLowerCase().split(' ').join(''),
+              key: nanoid(),
               name: name,
               date: Date.now(),
             },
           })
-        }
+          setTimeout(() => {
+            setName('')
+          }, 200)
+        }}
       />
 
       {state.length > 0 ? (

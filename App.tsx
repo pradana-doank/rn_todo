@@ -3,6 +3,8 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import ListTodo from './screens/ListTodo'
 
+import 'react-native-get-random-values'
+
 export default function App() {
   return (
     <View style={styles.container}>
