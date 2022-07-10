@@ -1,6 +1,6 @@
 export default interface TodoModel {
   key: string
   name: string
-  isCompleted?: boolean
+  isCompleted: boolean
   date: number
 }

@@ -34,6 +34,7 @@ const ListTodo = () => {
               key: nanoid(),
               name: name,
               date: Date.now(),
+              isCompleted: false,
             },
           })
           setTimeout(() => {
