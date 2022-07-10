@@ -2,12 +2,11 @@ import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import ListTodo from './screens/ListTodo'
-import todos from './src/data/Todos'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ListTodo todos={todos} />
+      <ListTodo />
 
       <StatusBar style="auto" />
     </View>

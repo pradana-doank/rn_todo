@@ -9,14 +9,8 @@ import {
 } from 'react-native'
 import TodoItem from '../components/TodoItem'
 import { initialTodos, todoReducer } from '../hooks/todoReducer'
-import TodoModel from '../src/data/TodoModel'
 
-interface ListTodoProps {
-  todos: TodoModel[]
-  children?: React.ReactNode
-}
-
-const ListTodo: React.FC<ListTodoProps> = ({ children, todos }) => {
+const ListTodo = () => {
   const [state, dispatch] = useReducer(todoReducer, initialTodos)
 
   const [name, setName] = useState('')

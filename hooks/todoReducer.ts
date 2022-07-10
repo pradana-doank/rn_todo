@@ -1,5 +1,4 @@
 import TodoModel from '../src/data/TodoModel'
-import todos from '../src/data/Todos'
 
 type TodoActionType =
   | {
@@ -15,12 +14,12 @@ type TodoActionType =
       payload: TodoModel
     }
 
-const initialTodos: TodoModel[] = todos
+const initialTodos: TodoModel[] = []
 
 const todoReducer = (state: typeof initialTodos, action: TodoActionType) => {
   switch (action.type) {
     case 'addTodo':
-      return [...state, action.payload]
+      state = [...state, action.payload]
     case 'deleteTodo':
     // const currentTodos = state
     // const currentIndex = currentTodos.findIndex(
